@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+  <title>DOM - Document Object Model Functions Demo</title>
+  <!-- All CSS relevant items are tagged under style
+  .class name will give access to all the elements of class
+  .mybox will be the whole box  
+  .mybox-title will access all the titles and .mbox-content will access all the contents-->
+  <style>
+    .mybox-title{
+      color:blue;
+      width:200px;
+      border:1px solid black;
+    }
+
+    .mybox-content{
+      background-color:greenyellow;
+      width:200px;
+      border:2px solid black;
+    }
+
+    .mybox{
+      float:left;
+    }
+  </style>
+    
+  <script >
+  function changeColorTitles()
+  {
+   var aBoxTitles = document.getElementsByClassName("mybox-title");
+   for (i=0 ; i < aBoxTitles.length;i++){
+    aBoxTitles[i].style.color= "red";
+    aBoxTitles[i].style.background = "black";
+   }
+  }
+
+  </script>
+
+</head>
+<body>
+<div class = "mybox">
+ <div class = "mybox-title">
+   <h3>Vishnu Chanting</h3>
+  </div>
+  <div class = "mybox-content">
+    <p> Om Namo Narayana</p>
+  </div>
+</div>  
+
+<div class = "mybox">
+  <div class = "mybox-title">
+    <h3 >Siva Chanting</h3>
+  </div>  
+    <div class = "mybox-content">
+      <p> Om Nama Shivaya</p> 
+    </div>
+  </div>  
+
+  <div class = "mybox">
+    <div class = "mybox-title">
+      <h3>Brahma Chanting</h3>
+     </div> 
+      <div class = "mybox-content">
+        <p> Om Brahma Devaya Namaha</p>
+      </div>
+    </div>  
+    
+   <button onclick="changeColorTitles()"> ChangeColors </button>
+
+</body>
